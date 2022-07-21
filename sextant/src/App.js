@@ -4,6 +4,7 @@ import './App.css'
 import Wrapper from './components/Wrapper';
 import Exhibit from "./components/Exhibit";
 import DisplayIp from "./components/DisplayIp";
+import Pylon from "./components/Pylon";
 
 class App extends Component {
   render() {
@@ -18,6 +19,9 @@ class App extends Component {
           </Exhibit>
           <Exhibit cardText="IPv4">
             <DisplayIp url='https://api.ipify.org?format=json' />
+          </Exhibit>
+          <Exhibit cardText="Latency">
+            <Pylon />
           </Exhibit>
         </Wrapper>
       </React.Fragment>

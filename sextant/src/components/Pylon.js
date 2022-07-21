@@ -6,14 +6,15 @@ function Pylon() {
     const ws = new WebSocket('ws://localhost:55455/');
 
     ws.onmessage = function (event) {
-        const json = JSON.stringify(event.data)
-        setLatency(json)
+        const date = new Date();
+        const json = JSON.parse(event.data)
+        setLatency(date - json)
     }
 
     console.log(latency)
 
     return (
-        <p>{latency}</p>
+        <p>{latency} ms</p>
     )
 }
 

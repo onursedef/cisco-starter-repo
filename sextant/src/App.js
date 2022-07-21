@@ -21,7 +21,7 @@ class App extends Component {
             <DisplayIp url='https://api.ipify.org?format=json' />
           </Exhibit>
           <Exhibit cardText="Latency">
-            <Pylon />
+            <Pylon/>
           </Exhibit>
         </Wrapper>
       </React.Fragment>

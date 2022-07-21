@@ -3,6 +3,7 @@ import Banner from "./components/Banner";
 import './App.css'
 import Wrapper from './components/Wrapper';
 import Exhibit from "./components/Exhibit";
+import DisplayIp from "./components/DisplayIp";
 
 class App extends Component {
   render() {
@@ -12,8 +13,11 @@ class App extends Component {
           <h1>Hi mom!</h1>
         </Banner>
         <Wrapper>
-          <Exhibit cardText="Oh,">
-            <h2>Hi Mark!</h2>
+          <Exhibit cardText="IPv4(v6)">
+            <DisplayIp url="https://api64.ipify.org?format=json" />
+          </Exhibit>
+          <Exhibit cardText="IPv4">
+            <DisplayIp url='https://api.ipify.org?format=json' />
           </Exhibit>
         </Wrapper>
       </React.Fragment>
